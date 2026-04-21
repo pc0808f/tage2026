@@ -67,18 +67,23 @@
 
   <div class="map-hint">👆 點圖放大・雙指縮放・滑動查看細節</div>
 
-  <div class="map-wrap" onclick="openMap()" style="cursor:zoom-in;">
-    <img src="booth-map.jpg" alt="擎天 TAGE 2026 攤位 2D 配置圖">
-    <div style="text-align:center;padding:6px 0 8px;font-size:.72rem;color:var(--gray);">🔍 點擊放大</div>
+  <div class="map-wrap" onclick="openMap('booth-map.jpg')" style="cursor:zoom-in;">
+    <img src="booth-map.jpg" alt="擎天攤位配置圖">
+    <div style="text-align:center;padding:6px 0 8px;font-size:.72rem;color:var(--gray);">🔍 擎天攤位配置圖・點擊放大</div>
   </div>
 
-  <!-- 全螢幕地圖 -->
+  <div class="map-wrap" onclick="openMap('expo-map.jpg')" style="cursor:zoom-in;">
+    <img src="expo-map.jpg" alt="TAGE 2026 展館平面圖">
+    <div style="text-align:center;padding:6px 0 8px;font-size:.72rem;color:var(--gray);">🔍 TAGE 展館整體平面圖・點擊放大</div>
+  </div>
+
+  <!-- 全螢幕地圖 lightbox -->
   <div id="mapLightbox" onclick="closeMap()"
        style="display:none;position:fixed;inset:0;background:#000;z-index:9999;overflow:auto;">
     <div style="position:sticky;top:0;left:0;right:0;z-index:1;display:flex;justify-content:flex-end;padding:8px 12px;">
       <span onclick="closeMap()" style="color:#fff;font-size:1.4rem;font-weight:900;cursor:pointer;background:rgba(0,0,0,.5);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;">✕</span>
     </div>
-    <img src="booth-map.jpg" alt="攤位配置圖"
+    <img id="mapLightboxImg" src="" alt="地圖"
          style="display:block;width:100%;max-width:none;min-width:100%;touch-action:pinch-zoom;">
   </div>
 
@@ -142,9 +147,11 @@
 <footer class="site-footer">擎天有限公司 Propsky · TAGE 2026</footer>
 <script src="nav.js"></script>
 <script>
-  function openMap() {
+  function openMap(src) {
+    document.getElementById('mapLightboxImg').src = src;
     var lb = document.getElementById('mapLightbox');
     lb.style.display = 'block';
+    lb.scrollTop = 0;
     document.body.style.overflow = 'hidden';
   }
   function closeMap() {
