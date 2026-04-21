@@ -45,15 +45,15 @@
       </div>
       <div class="step-item">
         <div class="step-num">4</div>
-        <div>畫面顯示 QR Code（<strong>5 分鐘有效</strong>）<br><span style="font-size:.8rem;color:var(--text2);">將手機對準扭蛋機掃描窗</span></div>
+        <div>畫面顯示 QR Code（<strong>30 秒有效</strong>）<br><span style="font-size:.8rem;color:var(--text2);">將手機螢幕對準機台掃描頭（QR Code 朝向掃描頭）</span></div>
       </div>
       <div class="step-item">
         <div class="step-num">5</div>
-        <div>聽到「嗶」聲 → 機器<strong>自動出球</strong> ✅<br><span style="font-size:.8rem;color:var(--text2);">從機台下方取物口取出扭蛋</span></div>
+        <div>機台掃到 → <strong>3–5 秒後自動出球</strong> ✅<br><span style="font-size:.8rem;color:var(--text2);">畫面自動跳到「兌換成功」</span></div>
       </div>
     </div>
     <div class="alert alert-blue" style="margin-top:10px;">
-      <span>ℹ️</span><span>Demo 模式下出球完成後自動補回點數，可以<strong>無限次示範</strong>。</span>
+      <span>ℹ️</span><span>Demo 模式可隨時從 Admin 後台<strong>補回點數與資格</strong>，不用等出球完成。</span>
     </div>
   </div>
 
@@ -92,7 +92,7 @@
     </div>
     <div class="faq-item">
       <div class="faq-q">條碼過期怎麼辦？</div>
-      <div class="faq-a">條碼有 5 分鐘有效期，過期重新兌換就好，Demo 模式下點數會自動補回來。</div>
+      <div class="faq-a">條碼只有 30 秒，過期重新兌換就好。點「補回點數與資格」可立即補回，不影響條碼紀錄。</div>
     </div>
     <div class="faq-item">
       <div class="faq-q">機器怎麼連線的？</div>
@@ -108,7 +108,8 @@
         <tr><td>App 不顯示會員資料</td><td>確認 WiFi 網路正常</td></tr>
         <tr><td>條碼過期</td><td>重新兌換，Demo 自動補回</td></tr>
         <tr><td>扭蛋機沒出球</td><td>檢查機器電源和 WiFi</td></tr>
-        <tr><td>點數用完</td><td>開 /api/admin/reset 重置</td></tr>
+        <tr><td>點數用完</td><td>Admin 後台 → Demo 控制 → 補回點數與資格</td></tr>
+        <tr><td>要從頭 Demo</td><td>Admin 後台 → Demo 控制 → 全場重置</td></tr>
       </tbody>
     </table>
   </div>
@@ -116,9 +117,18 @@
   <div class="card">
     <div class="card-title">🔗 重要連結</div>
     <ul class="item-list">
-      <li><span class="dot">📱</span><span>App：<strong>bubblecha.propskynet.com</strong></span></li>
+      <li><span class="dot">📱</span><span>會員 App：<strong>bubblecha.propskynet.com</strong></span></li>
       <li><span class="dot">🔗</span><span>備用：bubblecha.pages.dev</span></li>
     </ul>
+    <a href="https://bubblecha-production.up.railway.app/admin" target="_blank"
+       style="display:flex;align-items:center;gap:10px;background:#1e293b;color:#f1f5f9;border-radius:12px;padding:13px 16px;text-decoration:none;font-weight:700;font-size:.9rem;margin-top:10px;">
+      <span style="font-size:1.3rem;">⚙️</span>
+      <div>
+        <div>BubbleCha Admin 後台</div>
+        <div style="font-size:.72rem;opacity:.65;font-weight:400;margin-top:2px;">補回點數・全場重置・即時事件</div>
+      </div>
+      <span style="margin-left:auto;opacity:.5;">→</span>
+    </a>
   </div>
 
   <div class="card" style="background:var(--gray-bg);box-shadow:none;padding:10px 12px;">
