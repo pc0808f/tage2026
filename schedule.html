@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>每日工作內容 · TAGE 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .day-header {
+      border-radius: 12px;
+      padding: 14px 16px;
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .day-header.blue  { background: var(--blue);  color: #fff; }
+    .day-header.green { background: var(--green); color: #fff; }
+    .day-badge {
+      font-size: 1.4rem;
+      font-weight: 900;
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .day-info .date { font-size: .85rem; font-weight: 700; opacity: .85; }
+    .day-info .title { font-size: 1.05rem; font-weight: 900; }
+    .day-info .sub { font-size: .75rem; opacity: .8; margin-top: 2px; }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: 4px;
+    }
+    .contact-chip {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+    .contact-chip .role { font-size: .68rem; color: var(--gray); font-weight: 600; }
+    .contact-chip .name { font-size: .9rem; font-weight: 700; }
+    .contact-chip.full { grid-column: 1 / -1; flex-direction: row; align-items: center; gap: 10px; }
+
+    .timeline-item {
+      display: flex;
+      gap: 10px;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      align-items: flex-start;
+    }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-time {
+      font-size: .72rem;
+      font-weight: 700;
+      color: var(--blue);
+      min-width: 46px;
+      flex-shrink: 0;
+      padding-top: 2px;
+    }
+    .timeline-time.amber { color: var(--amber); }
+    .timeline-content { font-size: .85rem; line-height: 1.45; }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <a href="index.html" class="back">← 返回</a>
+  <div class="title">📅 每日工作內容</div>
+</div>
+
+<div class="section" style="padding-top:12px;">
+
+  <!-- 4/23 -->
+  <div class="day-header blue">
+    <div class="day-badge">23</div>
+    <div class="day-info">
+      <div class="date">4 月 23 日（三）・展覽第一天</div>
+      <div class="title">展場教學・解說・試玩</div>
+      <div class="sub">👔 著公司服</div>
+    </div>
+  </div>
+
+  <div class="card" style="border:2px solid var(--amber);">
+    <div class="card-title" style="color:var(--amber);">⚠️ 早上首要任務：了解所有設備</div>
+    <p style="font-size:.83rem;color:var(--text2);line-height:1.5;margin-bottom:10px;">
+      開展前確保對每台機器的功能、支付方式、話術都有基本認識。點進去快速過一遍，有問題當場問。
+    </p>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:6px;">
+      <a href="m01.html" style="background:var(--blue-bg);color:var(--blue);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M01<br>娃娃機</a>
+      <a href="m02.html" style="background:var(--amber-bg);color:var(--amber);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M02<br>打地鼠</a>
+      <a href="m03.html" style="background:var(--amber-bg);color:var(--amber);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M03<br>彈珠台</a>
+      <a href="m04.html" style="background:var(--amber-bg);color:var(--amber);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M04<br>扭蛋機</a>
+      <a href="m05.html" style="background:var(--blue-bg);color:var(--blue);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M05<br>BubbleCha</a>
+      <a href="m06.html" style="background:var(--amber-bg);color:var(--amber);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M06<br>搖馬</a>
+      <a href="m07.html" style="background:var(--gray-bg);color:var(--gray);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M07<br>A格子機</a>
+      <a href="m08.html" style="background:var(--gray-bg);color:var(--gray);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M08<br>B格子機</a>
+      <a href="m09.html" style="background:var(--green-bg);color:var(--green);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M09<br>格子飯店</a>
+      <a href="m10.html" style="background:var(--green-bg);color:var(--green);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M10<br>格子辦公</a>
+      <a href="m11.html" style="background:var(--blue-bg);color:var(--blue);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M11<br>一番賞</a>
+      <a href="m12.html" style="background:var(--green-bg);color:var(--green);border-radius:8px;padding:8px 4px;text-align:center;text-decoration:none;font-size:.75rem;font-weight:700;">M12<br>兌幣機</a>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎯 當日工作重點</div>
+    <ul class="item-list">
+      <li><span class="dot">👕</span><span><strong>著公司服</strong>出席，全天在場</span></li>
+      <li><span class="dot">🎮</span><span>引導訪客試玩各機台，帶著做 DEMO</span></li>
+      <li><span class="dot">💬</span><span>依訪客興趣做解說，活用各機台話術</span></li>
+      <li><span class="dot">📩</span><span>有興趣的客人引導掃 EDM QR Code 留聯絡方式</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📞 遇到這些情況，找誰？</div>
+    <div class="contact-grid">
+      <div class="contact-chip">
+        <div class="role">客人想深入談・業務洽詢</div>
+        <div class="name">Sam</div>
+      </div>
+      <div class="contact-chip">
+        <div class="role">客人想深入談・業務洽詢</div>
+        <div class="name">Betty</div>
+      </div>
+      <div class="contact-chip">
+        <div class="role">客人想深入談・業務洽詢</div>
+        <div class="name">優格</div>
+      </div>
+      <div class="contact-chip">
+        <div class="role">⚙️ 技術問題・機台故障</div>
+        <div class="name">Thomas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4/24 -->
+  <div class="day-header blue" style="margin-top:8px;">
+    <div class="day-badge">24</div>
+    <div class="day-info">
+      <div class="date">4 月 24 日（四）・展覽第二天</div>
+      <div class="title">展場教學・解說・試玩</div>
+      <div class="sub">👔 著公司服</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎯 當日工作重點</div>
+    <ul class="item-list">
+      <li><span class="dot">👕</span><span><strong>著公司服</strong>出席，全天在場</span></li>
+      <li><span class="dot">🎮</span><span>引導訪客試玩各機台，帶著做 DEMO</span></li>
+      <li><span class="dot">💬</span><span>依訪客興趣做解說，活用各機台話術</span></li>
+      <li><span class="dot">📩</span><span>有興趣的客人引導掃 EDM QR Code 留聯絡方式</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📞 遇到這些情況，找誰？</div>
+    <div class="contact-grid">
+      <div class="contact-chip">
+        <div class="role">客人想深入談・業務洽詢</div>
+        <div class="name">Sam</div>
+      </div>
+      <div class="contact-chip">
+        <div class="role">客人想深入談・業務洽詢</div>
+        <div class="name">Betty</div>
+      </div>
+      <div class="contact-chip">
+        <div class="role">客人想深入談・業務洽詢</div>
+        <div class="name">優格</div>
+      </div>
+      <div class="contact-chip">
+        <div class="role">⚙️ 技術問題・機台故障</div>
+        <div class="name">Thomas</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4/25 -->
+  <div class="day-header green" style="margin-top:8px;">
+    <div class="day-badge">25</div>
+    <div class="day-info">
+      <div class="date">4 月 25 日（五）・展覽最後一天</div>
+      <div class="title">展場 ＋ 逛展 ＋ 撤場</div>
+      <div class="sub">👕 便服</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">🎯 當日工作重點</div>
+    <div class="alert alert-green" style="margin-bottom:10px;">
+      <span>👕</span><span>今天穿<strong>便服</strong>，比較輕鬆！</span>
+    </div>
+    <div class="card-title" style="font-size:.78rem;color:var(--text2);margin-bottom:6px;">上午–下午 3 點前</div>
+    <ul class="item-list" style="margin-bottom:12px;">
+      <li><span class="dot">🎮</span><span>一樣在場教學、解說、試玩，維持正常服務</span></li>
+      <li><span class="dot">🚶</span><span><strong>多去逛展</strong>，了解其他廠商動態，蒐集資料，帶回公司討論</span></li>
+      <li><span class="dot">📸</span><span>看到有趣的東西拍下來，回公司一起分享</span></li>
+    </ul>
+    <div class="card-title" style="font-size:.78rem;color:var(--amber);margin-bottom:6px;">⏰ 15:00 開始</div>
+    <ul class="item-list">
+      <li><span class="dot">🚛</span><span><strong>開始準備收場</strong>，當天要完成撤展</span></li>
+      <li><span class="dot">📱</span><span>優先收回 <strong>6 台安卓平板</strong>，避免遺失</span></li>
+      <li><span class="dot">📦</span><span>機台打包好，推到門口，等小貨車載運</span></li>
+      <li><span class="dot">🧹</span><span>展板、珍珠板等裝潢品清理乾淨帶走</span></li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-title">📞 遇到這些情況，找誰？</div>
+    <div class="contact-grid">
+      <div class="contact-chip">
+        <div class="role">客人想深入談・業務洽詢</div>
+        <div class="name">Sam</div>
+      </div>
+      <div class="contact-chip">
+        <div class="role">客人想深入談・業務洽詢</div>
+        <div class="name">Betty</div>
+      </div>
+      <div class="contact-chip">
+        <div class="role">客人想深入談・業務洽詢</div>
+        <div class="name">優格</div>
+      </div>
+      <div class="contact-chip">
+        <div class="role">⚙️ 技術問題・機台故障</div>
+        <div class="name">Thomas</div>
+      </div>
+    </div>
+  </div>
+
+  <a href="moveout.html" class="link-btn outline" style="margin-top:4px;">🚛 查看詳細撤場注意事項</a>
+
+</div>
+
+<footer class="site-footer">擎天有限公司 Propsky · TAGE 2026</footer>
+<script src="nav.js"></script>
+</body>
+</html>

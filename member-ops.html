@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>會員系統操作 · 內部使用</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .internal-banner {
+      background: #1e293b;
+      color: #f1f5f9;
+      text-align: center;
+      padding: 10px 16px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
+    .op-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      margin-bottom: 12px;
+      overflow: hidden;
+    }
+    .op-card-header {
+      padding: 12px 14px 10px;
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .op-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 1px; }
+    .op-title { font-size: .95rem; font-weight: 700; }
+    .op-subtitle { font-size: .75rem; color: var(--text2); margin-top: 2px; line-height: 1.4; }
+    .op-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin: 8px 14px 12px;
+      background: #0f172a;
+      color: #7dd3fc;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: .78rem;
+      font-family: monospace;
+      word-break: break-all;
+      text-decoration: none;
+    }
+    .op-link:active { opacity: .8; }
+    .op-body { padding: 0 14px 14px; }
+    .field-table { width: 100%; border-collapse: collapse; font-size: .78rem; margin-top: 6px; }
+    .field-table th { background: var(--gray-bg); padding: 5px 8px; text-align: left; color: var(--text2); font-weight: 700; }
+    .field-table td { padding: 6px 8px; border-bottom: 1px solid var(--border); vertical-align: top; line-height: 1.4; }
+    .field-table tr:last-child td { border-bottom: none; }
+    .warn-row { background: #fef3c7; }
+    .step-mini {
+      display: flex;
+      gap: 8px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .83rem;
+      align-items: flex-start;
+      line-height: 1.4;
+    }
+    .step-mini:last-child { border-bottom: none; }
+    .step-mini .n {
+      background: #0f172a;
+      color: #fff;
+      font-size: .68rem;
+      font-weight: 700;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .status-row { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+    .status-chip { font-size: .72rem; padding: 3px 8px; border-radius: 20px; font-weight: 600; }
+  </style>
+</head>
+<body>
+
+<div class="internal-banner">🔒 內部使用・請勿展示給客人</div>
+
+<div class="page-header">
+  <a href="index.html" class="back">← 返回</a>
+  <div class="title">會員系統操作</div>
+</div>
+
+<div class="section" style="padding-top:12px;">
+
+  <div class="alert alert-amber" style="margin-bottom:12px;">
+    <span>👆</span>
+    <span>老闆在忙時，拿出平板或電腦，點下方連結，依步驟操作即可。<br>需要 <strong>系統管理員（admin）權限</strong>才能看到這些功能。</span>
+  </div>
+
+  <!-- 功能一：補點 / 發抽獎券給某個人 -->
+  <div class="op-card">
+    <div class="op-card-header">
+      <div class="op-icon">🎟️</div>
+      <div>
+        <div class="op-title">手動補發抽獎券（補償單一會員）</div>
+        <div class="op-subtitle">客人有問題要補券、補點、個別贈送時使用</div>
+      </div>
+    </div>
+
+    <a href="https://smartpay-vue.pages.dev/#/member/lottery-grant" target="_blank" class="op-link">
+      🔗 smartpay-vue.pages.dev/#/member/lottery-grant
+    </a>
+
+    <div class="op-body">
+
+      <div class="section-title" style="padding:0 0 6px;">操作步驟</div>
+      <div class="step-mini"><div class="n">1</div><div>先到「<strong>會員管理</strong>」頁，找到那位會員，複製他的 <strong>會員 ID（數字）</strong></div></div>
+      <div class="step-mini"><div class="n">2</div><div>回到這個頁面，把會員 ID 貼到「<strong>會員 ID</strong>」欄位</div></div>
+      <div class="step-mini"><div class="n">3</div><div>填入發券數量、到期時間（可留空=永不過期）、備註</div></div>
+      <div class="step-mini"><div class="n">4</div><div>按「<strong>發放抽獎券</strong>」→ 右上出現綠色提示即成功</div></div>
+      <div class="step-mini"><div class="n">5</div><div>📸 <strong>截圖留存「本次發券歷程」表格</strong>，重整頁面就消失了</div></div>
+
+      <div class="section-title" style="padding:10px 0 6px;">填表說明</div>
+      <table class="field-table">
+        <thead><tr><th>欄位</th><th>怎麼填</th></tr></thead>
+        <tbody>
+          <tr class="warn-row"><td><strong>⚠️ 會員 ID</strong></td><td>務必再三確認——發錯人<strong>沒辦法收回</strong></td></tr>
+          <tr><td>發券張數</td><td>想送幾張填幾張，最多 50 張</td></tr>
+          <tr><td>到期時間</td><td>留空 = 永不過期</td></tr>
+          <tr><td>備註</td><td>⚠️ <strong>會員看得到</strong>，請用婉轉用語<br>例：「客訴補償 - 20260423」</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 功能二：建立活動 QR -->
+  <div class="op-card">
+    <div class="op-card-header">
+      <div class="op-icon">📸</div>
+      <div>
+        <div class="op-title">建立活動 QR 碼（大量發放抽獎機會）</div>
+        <div class="op-subtitle">展場活動、海報、傳單、電子看板用——會員掃碼自動拿到抽獎券</div>
+      </div>
+    </div>
+
+    <a href="https://smartpay-vue.pages.dev/#/member/lottery-qr" target="_blank" class="op-link">
+      🔗 smartpay-vue.pages.dev/#/member/lottery-qr
+    </a>
+
+    <div class="op-body">
+
+      <div class="section-title" style="padding:0 0 6px;">操作步驟</div>
+      <div class="step-mini"><div class="n">1</div><div>點右上角「<strong>＋ 新增 QR 活動券</strong>」</div></div>
+      <div class="step-mini"><div class="n">2</div><div>填寫表單（見下方欄位說明）→ 按「<strong>建立</strong>」</div></div>
+      <div class="step-mini"><div class="n">3</div><div>跳出 QR 預覽 → 點「<strong>下載 PNG</strong>」交給印刷，或「<strong>複製連結</strong>」貼到 EDM</div></div>
+      <div class="step-mini"><div class="n">4</div><div>之後要重新下載：找到那筆紀錄 → 點「<strong>顯示 QR</strong>」</div></div>
+
+      <div class="section-title" style="padding:10px 0 6px;">填表說明</div>
+      <table class="field-table">
+        <thead><tr><th>欄位</th><th>怎麼填</th></tr></thead>
+        <tbody>
+          <tr><td>活動券名稱</td><td>例：「TAGE 2026 展場抽獎券」</td></tr>
+          <tr><td>總兌換次數上限</td><td>留空 = 無限制</td></tr>
+          <tr><td>每位會員可兌換次數</td><td>預設 1（每人只能掃一次）</td></tr>
+          <tr><td>QR 到期時間</td><td>留空 = 永不過期</td></tr>
+          <tr><td>後台內部備註</td><td>自己看的小抄，例：「展場印製 50 張」</td></tr>
+        </tbody>
+      </table>
+
+      <div class="section-title" style="padding:10px 0 6px;">QR 狀態說明</div>
+      <div class="status-row">
+        <span class="status-chip" style="background:#dcfce7;color:#14532d;">🟢 可用 = 還能掃</span>
+        <span class="status-chip" style="background:#f3f4f6;color:#374151;">⚪ 已過期</span>
+        <span class="status-chip" style="background:#fee2e2;color:#7f1d1d;">🔴 已用完</span>
+        <span class="status-chip" style="background:#fef9c3;color:#713f12;">🟡 已停用</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 兩個功能差在哪 -->
+  <div class="card">
+    <div class="card-title">🤔 兩個功能差在哪？</div>
+    <table class="simple-table">
+      <thead><tr><th></th><th>🎟️ 手動發券</th><th>📸 活動 QR</th></tr></thead>
+      <tbody>
+        <tr><td>發給誰</td><td>指定的單一會員</td><td>任何掃碼的人</td></tr>
+        <tr><td>適合場景</td><td>客訴補償、VIP 回饋</td><td>展場活動、印刷品</td></tr>
+        <tr><td>會員需要</td><td>不用做事，券自動出現</td><td>用 LINE 掃 QR</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:.78rem;color:var(--text2);margin-top:8px;">簡單記：<strong>發給「某個人」→ 手動發券；發給「一群人」→ 活動 QR</strong></p>
+  </div>
+
+  <div class="alert alert-red">
+    <span>⚠️</span>
+    <span>左側選單沒看到「會員系統」？代表帳號<strong>沒有 admin 權限</strong>，請聯絡老闆開權限。</span>
+  </div>
+
+</div>
+
+<footer class="site-footer">擎天有限公司 Propsky · 內部使用</footer>
+<script src="nav.js"></script>
+</body>
+</html>

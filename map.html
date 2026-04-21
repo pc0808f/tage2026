@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>攤位配置圖 · TAGE 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .map-wrap {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.12);
+      background: #fff;
+      margin-bottom: 12px;
+    }
+    .map-wrap img {
+      display: block;
+      width: 100%;
+      min-width: 320px;
+      height: auto;
+    }
+    .map-hint {
+      text-align: center;
+      font-size: .72rem;
+      color: var(--gray);
+      margin-bottom: 10px;
+    }
+    .zone-card {
+      border-radius: 10px;
+      padding: 10px 12px;
+      margin-bottom: 8px;
+    }
+    .zone-card .zone-label {
+      font-size: .72rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      margin-bottom: 6px;
+    }
+    .zone-card .machines {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+    .m-chip {
+      font-size: .75rem;
+      font-weight: 600;
+      padding: 3px 9px;
+      border-radius: 20px;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .m-chip.blue   { background: var(--blue-bg);  color: var(--blue); }
+    .m-chip.green  { background: var(--green-bg); color: var(--green); }
+    .m-chip.amber  { background: var(--amber-bg); color: var(--amber); }
+    .m-chip.gray   { background: var(--gray-bg);  color: var(--gray); }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <a href="index.html" class="back">← 返回</a>
+  <div class="title">🗺️ 攤位配置圖</div>
+</div>
+
+<div class="section" style="padding-top:12px;">
+
+  <div class="map-hint">👆 可左右滑動查看完整配置圖</div>
+
+  <div class="map-wrap">
+    <img src="booth-map.jpg" alt="擎天 TAGE 2026 攤位 2D 配置圖">
+  </div>
+
+  <div class="alert alert-blue" style="margin-bottom:10px;">
+    <span>📐</span><span>攤位規模：<strong>6m × 3m</strong>・A區-A21d・右側黃金轉角位</span>
+  </div>
+
+  <!-- Zone A -->
+  <div class="zone-card" style="background:#fef9c3;border:1.5px solid #fde047;">
+    <div class="zone-label" style="color:#854d0e;">★ Zone A・旗艦 OMO 隧道（右側黃金轉角）</div>
+    <div class="machines">
+      <a href="m01.html" class="m-chip blue">M01 娃娃機</a>
+      <a href="m11.html" class="m-chip blue">M11 E格子機 6格</a>
+      <a href="m08.html" class="m-chip gray">M08 B格子機 24格</a>
+      <a href="m05.html" class="m-chip blue">M05 扭蛋機</a>
+      <a href="m07.html" class="m-chip gray">M07 A格子機 24格（一番賞）</a>
+    </div>
+    <p style="font-size:.75rem;color:#78350f;margin-top:6px;">M01 上方疊放 M11，M08 緊鄰，IoT 連動展示核心區</p>
+  </div>
+
+  <!-- Zone C -->
+  <div class="zone-card" style="background:#eff6ff;border:1.5px solid #93c5fd;">
+    <div class="zone-label" style="color:#1e3a8a;">Zone C・後牆展示長廊</div>
+    <div class="machines">
+      <a href="m12.html" class="m-chip green">M12 兌幣機</a>
+      <a href="m02.html" class="m-chip amber">M02 打地鼠</a>
+      <a href="m03.html" class="m-chip amber">M03 彈珠台</a>
+      <a href="m04.html" class="m-chip amber">M04 霓虹扭蛋</a>
+      <span class="m-chip gray">TV 落地電視架</span>
+    </div>
+    <p style="font-size:.75rem;color:#1e3a8a;margin-top:6px;">傳統機台升級展示區，靠後牆一字排開</p>
+  </div>
+
+  <!-- Zone D -->
+  <div class="zone-card" style="background:#f0fdf4;border:1.5px solid #86efac;">
+    <div class="zone-label" style="color:#14532d;">Zone D・洽談區</div>
+    <div class="machines">
+      <a href="m09.html" class="m-chip green">M09+M10 QGrid 雙櫃</a>
+      <span class="m-chip gray">迎賓桌</span>
+      <span class="m-chip gray">延長插座</span>
+    </div>
+    <p style="font-size:.75rem;color:#14532d;margin-top:6px;">中央洽談桌旁，M09+10 桌上展示，QR Code 延伸插座備用</p>
+  </div>
+
+  <!-- Left -->
+  <div class="zone-card" style="background:#fff7ed;border:1.5px solid #fdba74;">
+    <div class="zone-label" style="color:#7c2d12;">左側走廊區</div>
+    <div class="machines">
+      <a href="m06.html" class="m-chip amber">M06 搖馬</a>
+    </div>
+    <p style="font-size:.75rem;color:#7c2d12;margin-top:6px;">鄰走道顯眼位置，吸引親子客群</p>
+  </div>
+
+  <div class="alert alert-amber">
+    <span>💡</span>
+    <span>點擊各機台名稱可直接查看該機台的話術與說明。</span>
+  </div>
+
+</div>
+
+<footer class="site-footer">擎天有限公司 Propsky · TAGE 2026</footer>
+<script src="nav.js"></script>
+</body>
+</html>

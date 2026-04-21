@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>清單 · TAGE 2026</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .checklist {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: .88rem;
+      line-height: 1.45;
+    }
+    .checklist li:last-child { border-bottom: none; }
+    .checklist input[type="checkbox"] {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      margin-top: 1px;
+      accent-color: var(--blue);
+      cursor: pointer;
+    }
+    .checklist label {
+      flex: 1;
+      cursor: pointer;
+    }
+    .checklist label.checked {
+      text-decoration: line-through;
+      color: var(--gray);
+    }
+    .checklist .note {
+      font-size: .72rem;
+      color: var(--text2);
+      margin-top: 2px;
+    }
+    .section-label {
+      font-size: .7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      color: var(--gray);
+      margin: 16px 0 6px;
+    }
+    .reset-btn {
+      background: var(--gray-bg);
+      color: var(--gray);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 7px 14px;
+      font-size: .78rem;
+      font-weight: 700;
+      cursor: pointer;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="page-header">
+  <a href="index.html" class="back">← 返回</a>
+  <div class="title">☑️ 清單</div>
+</div>
+
+<div class="section" style="padding-top:12px;">
+
+  <!-- ===== 帶齊清單 ===== -->
+  <div class="card">
+    <div class="card-title">🎒 帶齊清單（進場前確認）</div>
+    <p style="font-size:.75rem;color:var(--text2);margin-bottom:10px;">打勾後重整頁面會清掉，僅供當下確認用。</p>
+
+    <div class="section-label">👔 服裝</div>
+    <ul class="checklist" id="cl-bring">
+      <li><input type="checkbox" id="b1"><label for="b1">公司服 × 2 套（4/23、4/24 穿）<div class="note">燙好帶出門</div></label></li>
+      <li><input type="checkbox" id="b2"><label for="b2">便服（4/25 穿）</label></li>
+    </ul>
+
+    <div class="section-label">📱 設備</div>
+    <ul class="checklist">
+      <li><input type="checkbox" id="b3"><label for="b3">安卓平板 × 6 台<div class="note">全部充飽電，確認能開機</div></label></li>
+      <li><input type="checkbox" id="b4"><label for="b4">平板充電線 ＆ 充電頭（各 6 條/顆，或延長排插）</label></li>
+      <li><input type="checkbox" id="b4b"><label for="b4b">平板架 × 6 組</label></li>
+      <li><input type="checkbox" id="b5"><label for="b5">自己的手機（充飽電）</label></li>
+      <li><input type="checkbox" id="b6"><label for="b6">行動電源（備用）</label></li>
+    </ul>
+
+    <div class="section-label">🔧 現場工具</div>
+    <ul class="checklist">
+      <li><input type="checkbox" id="b7"><label for="b7">格子機備用鑰匙<div class="note">M09／M10／M11 各至少一把</div></label></li>
+      <li><input type="checkbox" id="b8"><label for="b8">延長線 ＆ 插座排插<div class="note">機台用電多，確認延長線夠長</div></label></li>
+      <li><input type="checkbox" id="b9"><label for="b9">螺絲起子（十字＋一字各一）</label></li>
+      <li><input type="checkbox" id="b10"><label for="b10">膠帶 ＆ 剪刀</label></li>
+    </ul>
+
+    <div class="section-label">📄 文件 ＆ 行銷</div>
+    <ul class="checklist">
+      <li><input type="checkbox" id="b11"><label for="b11">名片（Sam / Betty / 優格 各帶足夠）</label></li>
+      <li><input type="checkbox" id="b12"><label for="b12">EDM QR Code 印出或手機備妥<div class="note">掃 propskynet.com/dm</div></label></li>
+      <li><input type="checkbox" id="b13"><label for="b13">7 張海報確認張貼完畢</label></li>
+    </ul>
+
+    <div class="section-label">💰 現金 ＆ 雜項</div>
+    <ul class="checklist">
+      <li><input type="checkbox" id="b14"><label for="b14">備用零錢（供 Demo 用，換幣機展示）</label></li>
+      <li><input type="checkbox" id="b15"><label for="b15">飲水 ＆ 零食（三天耗體力）</label></li>
+      <li><input type="checkbox" id="b16"><label for="b16">雨具（台北四月天）</label></li>
+    </ul>
+
+    <button class="reset-btn" onclick="resetChecklist('cl-bring')">↺ 清除打勾</button>
+  </div>
+
+  <!-- ===== 撤場清單 ===== -->
+  <div class="card" style="border:2px solid var(--amber);">
+    <div class="card-title" style="color:var(--amber);">🚛 撤場清單（4/25・15:00 開始）</div>
+    <div class="alert alert-amber" style="margin-bottom:12px;">
+      <span>⏰</span><span>當天要完全撤完，小貨車到門口直接裝車。</span>
+    </div>
+
+    <div class="section-label">📱 優先收回</div>
+    <ul class="checklist" id="cl-moveout">
+      <li><input type="checkbox" id="m1"><label for="m1"><strong>安卓平板 × 6 台全部收回</strong><div class="note">最先做，避免遺失</div></label></li>
+      <li><input type="checkbox" id="m2"><label for="m2">平板充電線 ＆ 充電頭全數收回</label></li>
+      <li><input type="checkbox" id="m3"><label for="m3">備用鑰匙全數收回</label></li>
+    </ul>
+
+    <div class="section-label">🔌 斷電 ＆ 關機</div>
+    <ul class="checklist">
+      <li><input type="checkbox" id="m4"><label for="m4">所有機台關機<div class="note">M01–M12 逐一確認</div></label></li>
+      <li><input type="checkbox" id="m5"><label for="m5">拔除所有電源線 ＆ 延長線</label></li>
+      <li><input type="checkbox" id="m6"><label for="m6">網路線（如有拉線）一併收好</label></li>
+    </ul>
+
+    <div class="section-label">📦 打包</div>
+    <ul class="checklist">
+      <li><input type="checkbox" id="m7"><label for="m7">M01 娃娃機 打包</label></li>
+      <li><input type="checkbox" id="m8"><label for="m8">M02 打地鼠 打包</label></li>
+      <li><input type="checkbox" id="m9"><label for="m9">M03 彈珠台 打包</label></li>
+      <li><input type="checkbox" id="m10"><label for="m10">M04 扭蛋機 打包</label></li>
+      <li><input type="checkbox" id="m11"><label for="m11">M05 BubbleCha 打包</label></li>
+      <li><input type="checkbox" id="m12"><label for="m12">M06 搖馬 打包</label></li>
+      <li><input type="checkbox" id="m13"><label for="m13">M07 A格子機 打包</label></li>
+      <li><input type="checkbox" id="m14"><label for="m14">M08 B格子機 打包</label></li>
+      <li><input type="checkbox" id="m15"><label for="m15">M09 格子機（飯店）打包</label></li>
+      <li><input type="checkbox" id="m16"><label for="m16">M10 格子機（辦公室）打包</label></li>
+      <li><input type="checkbox" id="m17"><label for="m17">M11 一番賞格子機 打包</label></li>
+      <li><input type="checkbox" id="m18"><label for="m18">M12 物聯網兌幣機 打包</label></li>
+    </ul>
+
+    <div class="section-label">🗑 展場裝潢</div>
+    <ul class="checklist">
+      <li><input type="checkbox" id="m19"><label for="m19">7 張海報全部取下收好</label></li>
+      <li><input type="checkbox" id="m20"><label for="m20">展板 ＆ 珍珠板清理帶走<div class="note">不可留在現場</div></label></li>
+      <li><input type="checkbox" id="m21"><label for="m21">桌布 ＆ 佈置道具收齊</label></li>
+    </ul>
+
+    <div class="section-label">🚪 離場確認</div>
+    <ul class="checklist">
+      <li><input type="checkbox" id="m22"><label for="m22">機台全部推到門口，等小貨車</label></li>
+      <li><input type="checkbox" id="m23"><label for="m23">攤位地板/桌面清潔（垃圾帶走）</label></li>
+      <li><input type="checkbox" id="m24"><label for="m24">所有物品已清點，沒有遺漏</label></li>
+      <li><input type="checkbox" id="m25"><label for="m25">攤位最後確認一圈，可以離開</label></li>
+    </ul>
+
+    <button class="reset-btn" onclick="resetChecklist('cl-moveout')">↺ 清除打勾</button>
+  </div>
+
+  <a href="moveout.html" class="link-btn outline" style="margin-top:4px;">📋 查看詳細撤場注意事項</a>
+
+</div>
+
+<footer class="site-footer">擎天有限公司 Propsky · TAGE 2026</footer>
+<script src="nav.js"></script>
+<script>
+  document.querySelectorAll('.checklist input[type="checkbox"]').forEach(function(cb) {
+    cb.addEventListener('change', function() {
+      var label = document.querySelector('label[for="' + this.id + '"]');
+      if (label) label.classList.toggle('checked', this.checked);
+    });
+  });
+  function resetChecklist(id) {
+    var ul = document.getElementById(id);
+    if (!ul) {
+      // reset all if no id found
+      document.querySelectorAll('.checklist input[type="checkbox"]').forEach(function(cb) {
+        cb.checked = false;
+        var label = document.querySelector('label[for="' + cb.id + '"]');
+        if (label) label.classList.remove('checked');
+      });
+      return;
+    }
+    ul.querySelectorAll('input[type="checkbox"]').forEach(function(cb) {
+      cb.checked = false;
+      var label = document.querySelector('label[for="' + cb.id + '"]');
+      if (label) label.classList.remove('checked');
+    });
+  }
+</script>
+</body>
+</html>
