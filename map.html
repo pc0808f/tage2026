@@ -2,7 +2,7 @@
 <html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   <title>攤位配置圖 · TAGE 2026</title>
   <link rel="stylesheet" href="style.css">
   <style>
@@ -65,10 +65,21 @@
 
 <div class="section" style="padding-top:12px;">
 
-  <div class="map-hint">👆 可左右滑動查看完整配置圖</div>
+  <div class="map-hint">👆 點圖放大・雙指縮放・滑動查看細節</div>
 
-  <div class="map-wrap">
+  <div class="map-wrap" onclick="openMap()" style="cursor:zoom-in;">
     <img src="booth-map.jpg" alt="擎天 TAGE 2026 攤位 2D 配置圖">
+    <div style="text-align:center;padding:6px 0 8px;font-size:.72rem;color:var(--gray);">🔍 點擊放大</div>
+  </div>
+
+  <!-- 全螢幕地圖 -->
+  <div id="mapLightbox" onclick="closeMap()"
+       style="display:none;position:fixed;inset:0;background:#000;z-index:9999;overflow:auto;">
+    <div style="position:sticky;top:0;left:0;right:0;z-index:1;display:flex;justify-content:flex-end;padding:8px 12px;">
+      <span onclick="closeMap()" style="color:#fff;font-size:1.4rem;font-weight:900;cursor:pointer;background:rgba(0,0,0,.5);border-radius:50%;width:36px;height:36px;display:flex;align-items:center;justify-content:center;">✕</span>
+    </div>
+    <img src="booth-map.jpg" alt="攤位配置圖"
+         style="display:block;width:100%;max-width:none;min-width:100%;touch-action:pinch-zoom;">
   </div>
 
   <div class="alert alert-blue" style="margin-bottom:10px;">
@@ -130,5 +141,16 @@
 
 <footer class="site-footer">擎天有限公司 Propsky · TAGE 2026</footer>
 <script src="nav.js"></script>
+<script>
+  function openMap() {
+    var lb = document.getElementById('mapLightbox');
+    lb.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+  }
+  function closeMap() {
+    document.getElementById('mapLightbox').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+</script>
 </body>
 </html>
