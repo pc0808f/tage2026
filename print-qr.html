@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QR Code 列印頁 · TAGE 2026</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+      background: #fff;
+      color: #111;
+      padding: 16px;
+    }
+
+    h1 {
+      font-size: 13px;
+      color: #666;
+      margin-bottom: 14px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin: 14px 0 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #eee;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .qr-card {
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 10px 8px;
+      text-align: center;
+      background: #fff;
+      page-break-inside: avoid;
+    }
+
+    .qr-card img {
+      width: 120px;
+      height: 120px;
+      display: block;
+      margin: 0 auto 6px;
+    }
+
+    .qr-title {
+      font-size: 12px;
+      font-weight: 800;
+      color: #111;
+      line-height: 1.3;
+      margin-bottom: 3px;
+    }
+
+    .qr-sub {
+      font-size: 9.5px;
+      color: #666;
+      line-height: 1.4;
+    }
+
+    .qr-url {
+      font-size: 8.5px;
+      color: #999;
+      margin-top: 3px;
+      word-break: break-all;
+    }
+
+    .qr-tag {
+      display: inline-block;
+      font-size: 9px;
+      font-weight: 700;
+      padding: 2px 6px;
+      border-radius: 10px;
+      margin-bottom: 4px;
+    }
+    .tag-blue   { background: #dbeafe; color: #1d4ed8; }
+    .tag-green  { background: #d1fae5; color: #059669; }
+    .tag-amber  { background: #fef3c7; color: #d97706; }
+    .tag-gray   { background: #f3f4f6; color: #6b7280; }
+
+    .placeholder {
+      border: 2px dashed #ddd;
+      border-radius: 8px;
+      padding: 18px 8px;
+      text-align: center;
+      color: #bbb;
+      font-size: 10px;
+      line-height: 1.6;
+    }
+
+    .no-print { margin-top: 16px; }
+    .print-btn {
+      background: #1d4ed8;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    @media print {
+      .no-print { display: none; }
+      body { padding: 8px; }
+      h1 { margin-bottom: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>擎天 Propsky · TAGE 2026 · QR Code 列印頁</h1>
+
+<!-- 業務用 -->
+<div class="section-title">展場業務用（桌上 / 迎賓桌）</div>
+<div class="grid">
+
+  <div class="qr-card">
+    <span class="qr-tag tag-green">📩 EDM 收客資料</span>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://propskynet.com/dm&margin=6" alt="">
+    <div class="qr-title">索取完整介紹</div>
+    <div class="qr-sub">有興趣的客人掃這個<br>填信箱馬上收到資料</div>
+    <div class="qr-url">propskynet.com/dm</div>
+  </div>
+
+  <div class="qr-card">
+    <span class="qr-tag tag-green">🎟️ 會員體驗 Demo</span>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://liff.line.me/2002349257-mE0xs7FB&margin=6" alt="">
+    <div class="qr-title">會員系統體驗</div>
+    <div class="qr-sub">加入會員送 3 點・試玩機台<br>⚠️ 必須用 LINE App 掃</div>
+    <div class="qr-url">liff.line.me/2002349257-mE0xs7FB</div>
+  </div>
+
+  <div class="qr-card">
+    <span class="qr-tag tag-blue">📊 機台管家 Demo</span>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://claw-machine-manager-cloud.pages.dev/&margin=6" alt="">
+    <div class="qr-title">手機管理後台</div>
+    <div class="qr-sub">訪客模式・無需帳號<br>即時監控・遠端控制</div>
+    <div class="qr-url">claw-machine-manager-cloud.pages.dev</div>
+  </div>
+
+</div>
+
+<!-- 機台貼用 -->
+<div class="section-title">貼在機台上（消費者掃）</div>
+<div class="grid">
+
+  <div class="qr-card">
+    <span class="qr-tag tag-blue">🫧 M05 BubbleCha</span>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://bubblecha.propskynet.com&margin=6" alt="">
+    <div class="qr-title">BubbleCha 扭蛋機</div>
+    <div class="qr-sub">手機掃碼 → 點數兌換扭蛋<br>Demo 帳號：林珍珠 1,250 點</div>
+    <div class="qr-url">bubblecha.propskynet.com</div>
+  </div>
+
+  <div class="placeholder">
+    <div style="font-size:20px;margin-bottom:6px;">⬜</div>
+    <strong>M09 格子機（飯店）</strong><br>
+    從 QGrid 後台<br>機器卡片 → QR Code 圖示<br>下載後補貼此處
+  </div>
+
+  <div class="placeholder">
+    <div style="font-size:20px;margin-bottom:6px;">⬜</div>
+    <strong>M10 格子機（辦公室）</strong><br>
+    從 QGrid 後台<br>機器卡片 → QR Code 圖示<br>下載後補貼此處
+  </div>
+
+  <div class="placeholder">
+    <div style="font-size:20px;margin-bottom:6px;">⬜</div>
+    <strong>M11 一番賞格子機</strong><br>
+    從 QGrid 後台<br>機器卡片 → QR Code 圖示<br>下載後補貼此處
+  </div>
+
+</div>
+
+<!-- 員工用 -->
+<div class="section-title">員工備用</div>
+<div class="grid">
+
+  <div class="qr-card">
+    <span class="qr-tag tag-gray">📖 展場速查手冊</span>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=120x120&data=https://pc0808f.github.io/tage2026/&margin=6" alt="">
+    <div class="qr-title">TAGE 2026 員工手冊</div>
+    <div class="qr-sub">機台話術・緊急處理<br>TWQR 對照・每日工作</div>
+    <div class="qr-url">pc0808f.github.io/tage2026</div>
+  </div>
+
+</div>
+
+<div class="no-print" style="text-align:center;">
+  <button class="print-btn" onclick="window.print()">🖨️ 列印此頁</button>
+  <p style="margin-top:8px;font-size:12px;color:#999;">TWQR 立牌請另外列印 20260409_TWQR_壓克力立牌(2).pdf</p>
+</div>
+
+</body>
+</html>
