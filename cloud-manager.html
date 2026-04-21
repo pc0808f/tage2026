@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>夾娃娃機台管家 · TAGE 2026</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="page-header">
+  <a href="index.html" class="back">← 返回</a>
+  <div class="title">📊 夾娃娃機台管家</div>
+</div>
+<div class="section" style="padding-top:12px;">
+
+  <div class="badges">
+    <span class="badge badge-blue">客群 A・場主／台主</span>
+    <span class="badge badge-blue">手機管理後台</span>
+    <span class="badge badge-blue">遠端控制</span>
+    <span class="badge badge-gray">M01 M02 M03 M04 M05 M06</span>
+  </div>
+
+  <div class="pitch-opener">
+    <div class="label">🎯 開場白（場主 / 台主）</div>
+    <div class="line">「你現在知道你每台機器今天收了多少錢嗎？」</div>
+    <div class="pitch-follow">（等對方回答）<br>「我們這個，打開手機就看得到，還可以直接遠端重開機、遠端投幣讓客人試玩，不用跑到現場。」</div>
+  </div>
+
+  <div class="hero-box blue">
+    坐在家裡管全場<br>即時收益・遠端控制・補貨紀錄・一機搞定
+  </div>
+
+  <!-- 訪客 Demo QR -->
+  <div class="card" style="text-align:center;">
+    <div class="card-title">📲 現場 Demo — 讓客人直接試用</div>
+    <div class="alert alert-green" style="text-align:left;margin-bottom:12px;">
+      <span>✅</span><span><strong>訪客模式無需帳號密碼</strong>，掃碼直接進入體驗所有功能。</span>
+    </div>
+    <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://claw-machine-manager-cloud.pages.dev/&margin=10"
+         alt="機台管家 QR Code"
+         style="width:220px;height:220px;border-radius:12px;margin:4px auto 10px;display:block;">
+    <a href="https://claw-machine-manager-cloud.pages.dev/" target="_blank"
+       style="display:block;background:var(--blue);color:#fff;border-radius:12px;padding:14px;font-size:1rem;font-weight:900;text-decoration:none;">
+      👉 直接開啟管理介面
+    </a>
+  </div>
+
+  <!-- 核心功能 -->
+  <div class="card">
+    <div class="card-title">🌟 五大核心功能</div>
+
+    <div style="margin-bottom:12px;">
+      <div class="badge badge-blue" style="margin-bottom:6px;">📡 即時監控</div>
+      <ul class="item-list">
+        <li><span class="dot">✅</span><span>每台機器上線 / 離線狀態即時顯示，超過 90 分鐘自動標記離線</span></li>
+        <li><span class="dot">🎰</span><span>支援娃娃機、扭蛋機、打地鼠、搖馬、彈珠檯各自獨立圖示</span></li>
+        <li><span class="dot">🏪</span><span>多場地切換，一個帳號管所有店點</span></li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom:12px;">
+      <div class="badge badge-blue" style="margin-bottom:6px;">💰 收益數字</div>
+      <ul class="item-list">
+        <li><span class="dot">📅</span><span>今日、昨日、本週、本月、或<strong>任意自訂區間</strong>的投幣額、遊玩次數、出獎數</span></li>
+        <li><span class="dot">🏆</span><span>每台機器個別營業額排名，<strong>一眼看出哪台最賺</strong></span></li>
+        <li><span class="dot">🔽</span><span>依金額 / 次數 / 出獎數一鍵排序，績效差的馬上找出來</span></li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom:12px;">
+      <div class="badge badge-blue" style="margin-bottom:6px;">🏦 財務結算</div>
+      <ul class="item-list">
+        <li><span class="dot">📋</span><span>月結帳務自動彙整，可查前兩個月歷史</span></li>
+        <li><span class="dot">💳</span><span><strong>提款申請直接在 App 內操作</strong>，綁定銀行帳戶，不用手動填資料</span></li>
+        <li><span class="dot">🔍</span><span>交易明細一覽，場主與台主各自看自己的數字</span></li>
+      </ul>
+    </div>
+
+    <div style="margin-bottom:12px;">
+      <div class="badge badge-blue" style="margin-bottom:6px;">🎮 遠端控制</div>
+      <ul class="item-list">
+        <li><span class="dot">🔄</span><span><strong>遠端重啟</strong>：手機直接發出重啟指令，不用跑現場</span></li>
+        <li><span class="dot">🪙</span><span><strong>遠端投幣</strong>：讓客人試玩或測試機器，直接從手機操作</span></li>
+      </ul>
+    </div>
+
+    <div>
+      <div class="badge badge-blue" style="margin-bottom:6px;">📝 日常管理</div>
+      <ul class="item-list">
+        <li><span class="dot">📌</span><span><strong>釘選常用機台</strong>：重要機台置頂，不用每次捲到底找</span></li>
+        <li><span class="dot">📒</span><span><strong>機台備註</strong>：記錄難度設定、特殊狀況，換班交接不怕遺忘</span></li>
+        <li><span class="dot">📦</span><span><strong>補貨 / 定期檢查紀錄</strong>：補完貨按一下，自動記錄時間，告別紙本</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 適合誰用 -->
+  <div class="card">
+    <div class="card-title">👥 適合誰用？</div>
+    <table class="simple-table">
+      <thead><tr><th>角色</th><th>主要用途</th></tr></thead>
+      <tbody>
+        <tr><td><strong>場主</strong></td><td>監控全場、月結對帳、提款管理</td></tr>
+        <tr><td><strong>台主（多店）</strong></td><td>跨場地收益追蹤、遠端重啟、不用跑場</td></tr>
+        <tr><td><strong>店長 / 員工</strong></td><td>補貨紀錄、異常機台通報</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- DEMO 重點 -->
+  <div class="card">
+    <div class="card-title">🎬 DEMO 重點（訪客模式直接展示）</div>
+    <div class="steps">
+      <div class="step-item">
+        <div class="step-num">1</div>
+        <div>打開管理介面，<strong>展示機台清單</strong><br>
+        <span style="font-size:.8rem;color:var(--text2);">「這就是你場上所有機器的狀態，哪台在線、哪台離線，一眼就看到。」</span></div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">2</div>
+        <div>點進一台機器，<strong>展示今日收益數字</strong><br>
+        <span style="font-size:.8rem;color:var(--text2);">「今天收了多少、玩了幾次、哪台最賺，不用等月底才知道。」</span></div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">3</div>
+        <div>展示<strong>遠端投幣 / 重啟功能</strong><br>
+        <span style="font-size:.8rem;color:var(--text2);">「機器卡住了，這裡按一下就重開，不用打電話叫人去現場。」</span></div>
+      </div>
+      <div class="step-item">
+        <div class="step-num">4</div>
+        <div>展示<strong>補貨紀錄</strong><br>
+        <span style="font-size:.8rem;color:var(--text2);">「補完貨打個勾，時間自動記下來，多人管場也不會漏。」</span></div>
+      </div>
+    </div>
+    <div class="highlight" style="margin-top:10px;">💡 直接把平板交給客人，讓他自己點看看——訪客模式不怕誤操作。</div>
+  </div>
+
+  <!-- 使用方式 -->
+  <div class="card">
+    <div class="card-title">📱 使用方式</div>
+    <ul class="item-list">
+      <li><span class="dot">🚀</span><span><strong>不需安裝</strong>：手機開瀏覽器或掃 QR Code 立即進入</span></li>
+      <li><span class="dot">👆</span><span>介面針對<strong>單手操作</strong>優化，站在場地中間也好用</span></li>
+      <li><span class="dot">🌙</span><span><strong>深色模式</strong>：昏暗場地環境也看得清楚</span></li>
+    </ul>
+    <div class="alert alert-amber" style="margin-top:10px;">
+      <span>💡</span><span>展場<strong>以手機版介紹為主</strong>。客人如果想深入了解完整後台功能，再帶他看 PC 版——找 <strong>Sam / Betty / 優格</strong> 一起陪談。</span>
+    </div>
+  </div>
+
+  <div class="alert alert-green">
+    <span>📩</span>
+    <span>有興趣深聊？引導掃 EDM QR Code 留聯絡方式，或找 <strong>Sam / Betty / 優格</strong> 進一步洽談。</span>
+  </div>
+
+</div>
+<footer class="site-footer">擎天有限公司 Propsky · TAGE 2026</footer>
+<script src="nav.js"></script>
+</body>
+</html>
